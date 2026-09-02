@@ -1,0 +1,57 @@
+<?php
+$namaToko="minimarket ona alfiana";
+$lokasiToko="kampung manggahang";
+
+$namaKasir="gyury";
+$tanggalTransaksi=("10-11-2004");
+$nomorTransaksi="TMBE232";|
+
+$namaProduk1="Beras 1Kg";
+$hargaProduk1=75000;
+$jumlahProduk1=1;
+
+$namaProduk2="Minyak Goreng 1L";
+$hargaProduk2=18000;
+$jumlahProduk2=2;
+
+$namaProduk3="Gula 1Kg";
+$hargaProduk3=14000;
+$jumlahProduk3=3;
+
+$totalProduk1=$hargaProduk1*$jumlahProduk1;
+$totalProduk2=$hargaProduk2*$jumlahProduk2;
+$totalProduk3=$hargaProduk3*$jumlahProduk3;
+
+$totalBelanja=$totalProduk1+$totalProduk2+$totalProduk3;
+
+$diskon=10000;
+$pajakPersen=11;
+$biayaPlastik=2000;
+
+$pajak=($totalBelanja*$pajakPersen)/100;
+$setelahDiskon = $totalBelanja-$diskon;
+$totalAkhir = $setelahDiskon+$pajak+$biayaPlastik;
+
+$uangBayar=200000;
+$kembalian=$uangBayar-$totalAkhir;
+
+echo"<h2>$namaToko</h2>";
+echo"Lokasi:$lokasiToko<br>";
+echo"Kasir:$namaKasir<br>";
+echo"Tanggal Transaksi:$tanggalTransaksi<br>";
+echo"Nomor Transaksi:$nomorTransaksi<hr>";
+
+echo"$namaProduk1($jumlahProduk1 x $hargaProduk1)=Rp $totalProduk1 <br>";
+echo"$namaProduk2($jumlahProduk2 x $hargaProduk2)=Rp $totalProduk2 <br>";
+echo"$namaProduk3($jumlahProduk3 x $hargaProduk3)=Rp $totalProduk3 <br>";
+
+echo"<hr>";
+echo"Total Belanja:Rp$diskon<br>";
+echo"pajak (11%):Rp$pajak<br>";
+echo"biaya Plastik:Rp$biayaPlastik<br>";
+echo"<strong>Total Akhir:Rp $totalAkhir</strong><br><br>";
+
+echo"Uang Bayar:$uangBayar<br>";
+echo"Kembalian:$kembalian<br>";
+
+?>
